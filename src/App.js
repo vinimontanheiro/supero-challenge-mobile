@@ -2,40 +2,26 @@ import React from 'react';
 import {Provider as ReduxProvider} from 'react-redux';
 import {ApolloProvider} from '@apollo/react-hooks';
 import {PersistGate} from 'redux-persist/lib/integration/react';
-import {I18nextProvider, useTranslation} from 'react-i18next';
-import {SafeAreaView, StyleSheet, View, Text, StatusBar} from 'react-native';
+import {I18nextProvider} from 'react-i18next';
+import {StatusBar} from 'react-native';
 import {persistor, store} from './services/redux/store';
 import apolloClient from './services/apollo/client';
 import i18next from './services/i18n/i18next';
+import BookView from './modules/Book/BookView';
 
 const App = () => {
-  const {t} = useTranslation(`book`);
-
   return (
     <ReduxProvider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <ApolloProvider client={apolloClient}>
           <I18nextProvider i18n={i18next}>
             <StatusBar barStyle="dark-content" />
-            <SafeAreaView>
-              <View>
-                <Text style={styles.sectionTitle}>{t(`title`)}</Text>
-              </View>
-            </SafeAreaView>
+            <BookView />
           </I18nextProvider>
         </ApolloProvider>
       </PersistGate>
     </ReduxProvider>
   );
 };
-
-const styles = StyleSheet.create({
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: `600`,
-    color: `#000000`,
-    padding: 10,
-  },
-});
 
 export default App;
