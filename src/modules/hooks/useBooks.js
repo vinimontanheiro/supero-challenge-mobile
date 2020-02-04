@@ -23,10 +23,7 @@ const LIST_BOOKS_QUERY = gql`
 const useBooks = () => {
   const {t} = useTranslation(`book`);
   const [books, setBooks] = useState([]);
-  const {loading, error, data} = useQuery(LIST_BOOKS_QUERY);
-
-  console.log(`books >> `, data);
-  console.log(`error >> `, error);
+  const {loading, data} = useQuery(LIST_BOOKS_QUERY);
 
   useEffect(() => {
     if (data) {

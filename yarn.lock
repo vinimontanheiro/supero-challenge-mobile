@@ -6840,6 +6840,11 @@ rimraf@~2.2.6:
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.2.8.tgz#e439be2aaee327321952730f99a8929e4fc50582"
   integrity sha1-5Dm+Kq7jJzIZUnMPmaiSnk/FBYI=
 
+rn-tooltip@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/rn-tooltip/-/rn-tooltip-2.0.0.tgz#de0a2e220e83cc044fb598029dce6c222e0bdf69"
+  integrity sha512-yeErRA1I3JCEYZuicpSBg+lI5IYsnoMZMKXIKgrGfE6LWn+e4bPqVgrI03eS/q1yuOImJ02R4P/BkKK/VWTFqA==
+
 rsvp@^4.8.4:
   version "4.8.5"
   resolved "https://registry.yarnpkg.com/rsvp/-/rsvp-4.8.5.tgz#c8f155311d167f68f21e168df71ec5b083113734"
