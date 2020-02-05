@@ -8,7 +8,7 @@ import SplashScreen from 'react-native-splash-screen';
 import {persistor, store} from './services/redux/store';
 import apolloClient from './services/apollo/client';
 import i18next from './services/i18n/i18next';
-import BookView from './modules/Book/BookView';
+import Navigator from './Navigator';
 
 const App = () => {
   useEffect(() => {
@@ -20,7 +20,7 @@ const App = () => {
         <ApolloProvider client={apolloClient}>
           <I18nextProvider i18n={i18next}>
             <StatusBar barStyle="dark-content" />
-            <BookView />
+            <Navigator />
           </I18nextProvider>
         </ApolloProvider>
       </PersistGate>
