@@ -1,5 +1,22 @@
 {
   "book":{
-    "title": "Title"
+    "title": "Title",
+    "author": "Author",
+    "publisher": "Publisher",
+    "year": "Year",
+    "isbn" : "ISBN",
+    "weight": "Weight",
+    "dimensions": "Dimensions"
+  },
+  "language":{
+    "language": "Language",
+    "pt_BR": "Portuguese",
+    "en_US": "English",
+    "es": "Spanish"
+  },
+  "action":{
+    "search": "Search",
+    "close" : "Close",
+    "clear": "Clear"
   }
 }

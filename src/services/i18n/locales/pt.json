@@ -1,5 +1,22 @@
 {
   "book":{
-    "title": "Título"
+    "title": "Título",
+    "author": "Autor",
+    "publisher": "Editora",
+    "year": "Ano",
+    "isbn" : "ISBN",
+    "weight": "Peso",
+    "dimensions": "Dimensões"
+  },
+  "language":{
+    "language": "Idioma",
+    "pt_BR": "Português",
+    "en_US": "Inglês",
+    "es": "Espanhol"
+  },
+  "action":{
+    "search": "Buscar",
+    "close" : "Fechar",
+    "clear": "Limpar"
   }
 }
