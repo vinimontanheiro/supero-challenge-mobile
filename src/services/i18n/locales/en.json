@@ -18,5 +18,16 @@
     "search": "Search",
     "close" : "Close",
     "clear": "Clear"
+  },
+  "login":{
+    "email": "E-mail",
+    "password": "Password",
+    "login": "Login" 
+  },
+  "error":{
+    "required_user": "Input a right e-mail",
+    "required_password" : "Input password",
+    "account_not_found": "Has no account associate with this e-mail",
+    "wrong_password": "Wrong password"
   }
 }

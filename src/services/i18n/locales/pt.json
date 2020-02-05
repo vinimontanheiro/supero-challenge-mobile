@@ -18,5 +18,16 @@
     "search": "Buscar",
     "close" : "Fechar",
     "clear": "Limpar"
+  },
+  "login":{
+    "email": "E-mail",
+    "password": "Senha",
+    "login": "Entrar" 
+  },
+  "error":{
+    "invalid_email": "Informe um e-mail válido",
+    "required_password" : "Informe o password",
+    "account_not_found": "Não existe conta associada a este e-mail",
+    "wrong_password": "Senha inválida"
   }
 }

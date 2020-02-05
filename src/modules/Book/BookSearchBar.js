@@ -1,18 +1,30 @@
 import React, {useState, useCallback} from 'react';
 import PropTypes from 'prop-types';
 import DateTimePicker from '@react-native-community/datetimepicker';
-import {TextInput, StyleSheet, View} from 'react-native';
+import {TextInput, StyleSheet, View, AsyncStorage} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import {useTranslation} from 'react-i18next';
+import {useNavigation} from '@react-navigation/native';
+import {useDispatch} from 'react-redux';
+import {SCREEN} from '../../constants';
+import {resetStore} from '../../services/redux/actions';
 
 const BookSearchBar = ({value, onChangeText, date, onChangeDate}) => {
   const {t} = useTranslation(`action`);
+  const dispatch = useDispatch();
+  const {navigate} = useNavigation();
   const [showDatePicker, setShowDatePicker] = useState(false);
 
   const handleShowDatePicker = useCallback(v => {
     setShowDatePicker(v);
   }, []);
+
+  const handleLogout = useCallback(() => {
+    navigate(SCREEN.LOGIN);
+    dispatch(resetStore());
+    AsyncStorage.clear();
+  }, [dispatch, navigate]);
 
   return (
     <>
@@ -30,6 +42,7 @@ const BookSearchBar = ({value, onChangeText, date, onChangeDate}) => {
           size={45}
           name="calendar"
         />
+        <Icon onPress={handleLogout} size={40} name="logout" />
       </View>
       {showDatePicker && (
         <DateTimePicker
@@ -65,7 +78,7 @@ const styles = StyleSheet.create({
     height: 60,
   },
   input: {
-    width: `85%`,
+    width: `70%`,
     height: 50,
     fontSize: 16,
     padding: 2,

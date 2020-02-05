@@ -3,3 +3,8 @@ export const ENDPOINTS = {
 };
 
 export const IS_PRODUCTION = process.env.NODE_ENV === `production`;
+
+export const SCREEN = {
+  LOGIN: `Login`,
+  BOOK: `Book`,
+};
