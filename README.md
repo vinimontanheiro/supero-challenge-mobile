@@ -39,13 +39,15 @@ $ yarn android
   - app-debug.apk
 ```
 
-### A URL do servidor está apontando para o servidor de produção, ela pode ser alterara pela váriavel de ambien GRAPHQL_URI ou pelo arquivo:
+### A URL do servidor está apontando para o servidor de produção, ela pode ser alterara pela variável de ambiente GRAPHQL_URI ou pelo arquivo:
 
 ```
 - project-folder
   - src
     - constants.js //GRAPHQL_URI
 ```
+
+### Se for acaso tiver algum problema com servidor de produção, por favor me avisem, as vezes o Digital Ocean entra e manutenção, não deixei automatizado para levantar os serviços
 
 ### usuário e senha padrão de login:
   - e-mail : fulano@supero.com.br
